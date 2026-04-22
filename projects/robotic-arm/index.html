@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Robotic Arm — Oscar Wilmerding</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+  <div class="container">
+
+    <nav>
+      <a href="../../" class="nav-name">Oscar Wilmerding</a>
+      <div class="nav-links">
+        <a href="../../">Home</a>
+        <div class="nav-dropdown-wrap">
+          <span class="nav-dropdown-trigger">Projects</span>
+          <div class="nav-dropdown-menu">
+            <a href="../robotic-mural-printer/">Robotic Mural Printer</a>
+            <a href="../small-wall-printer/">Small Wall Printer</a>
+            <a href="../ai-camera/">AI Camera</a>
+            <a href="../kestrel-sensor/">Kestrel Sensor</a>
+            <a href="../robotic-arm/">Robotic Arm</a>
+            <a href="../misting-chamber/">Misting Chamber</a>
+            <a href="../golf-cart-rewiring/">Golf Cart Rewiring</a>
+            <a href="../3d-modeling/">3D Modeling at Northeastern</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <a href="../../" class="back-link">Projects</a>
+
+    <div class="project-header">
+      <h1 class="project-title">Robotic Arm</h1>
+      <p class="project-subtitle">A custom robotic arm built to hold an optical sensor at precise angles during E Ink display testing.</p>
+      <div class="project-meta">
+        <span>2023</span>
+        <span class="project-meta-dot"></span>
+        <span>Mechanical Design · Embedded Systems · Software</span>
+      </div>
+      <div class="project-skills">
+        <span class="tag">Arduino</span>
+        <span class="tag">3D Printing</span>
+        <span class="tag">Machining</span>
+        <span class="tag">Python</span>
+      </div>
+    </div>
+
+    <div class="media-full">
+      <img src="assets/images/primary/cover.jpg" alt="Robotic Arm">
+    </div>
+
+    <div class="body-block">
+      <p class="body-text">During E Ink display development at work, I needed to measure optical properties of display films from many angles with high repeatability. I built a custom robotic arm to automate this process — holding a sensor at precise positions and cycling through a defined sequence of angles without manual repositioning.</p>
+    </div>
+
+    <div class="body-block">
+      <div class="body-label">Design</div>
+      <p class="body-text">The arm was designed in SolidWorks and went through several prototyping iterations to achieve the required range of motion and rigidity. All structural parts were 3D printed, with machined components used where tighter tolerances were needed. The joint arrangement was determined by the angular range required to characterize the display samples.</p>
+    </div>
+
+    <div class="media-grid">
+      <div class="media-item">
+        <img src="assets/images/secondary/initial designs.png" alt="Initial arm designs">
+        <div class="caption">Initial designs</div>
+      </div>
+      <div class="media-item">
+        <img src="assets/images/secondary/3d printed part sketches.png" alt="3D printed part sketches">
+        <div class="caption">3D printed part sketches</div>
+      </div>
+    </div>
+
+    <div class="media-full">
+      <img src="assets/images/secondary/prototyping iterations.png" alt="Prototyping iterations">
+      <div class="caption">Prototyping iterations</div>
+    </div>
+
+    <div class="body-block">
+      <div class="body-label">Motion &amp; Control</div>
+      <p class="body-text">Servo motors drive each joint, controlled by an Arduino. A Python script on the host computer generates the movement sequences and communicates with the Arduino over serial. The wiring was routed through the arm structure to keep the assembly clean and avoid cable interference with motion.</p>
+    </div>
+
+    <div class="media-grid">
+      <div class="media-item">
+        <img src="assets/images/secondary/wiring diagram.png" alt="Wiring diagram">
+        <div class="caption">Wiring diagram</div>
+      </div>
+      <div class="media-item">
+        <img src="assets/images/secondary/controller software.png" alt="Controller software">
+        <div class="caption">Controller software</div>
+      </div>
+    </div>
+
+    <div class="media-full">
+      <video
+        src="https://oscarwilmerding.com/arm-movement.mp4"
+        poster="assets/images/secondary/arm movement poster.jpg"
+        controls playsinline muted preload="none"
+      ></video>
+      <div class="caption">Arm movement sequence</div>
+    </div>
+
+    <div class="media-grid">
+      <div class="media-item">
+        <video
+          src="https://oscarwilmerding.com/servos-in-use-1.mp4"
+          poster="assets/images/secondary/servos poster 1.jpg"
+          controls playsinline muted preload="none"
+        ></video>
+        <div class="caption">Servos in use</div>
+      </div>
+      <div class="media-item">
+        <video
+          src="https://oscarwilmerding.com/servos-in-use-2.mp4"
+          poster="assets/images/secondary/servos poster 2.jpg"
+          controls playsinline muted preload="none"
+        ></video>
+        <div class="caption">Servos in use</div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="footer-inner">
+        <span class="footer-name">Oscar Wilmerding</span>
+        <div class="footer-links">
+          <a href="mailto:oewilmerding@gmail.com">oewilmerding@gmail.com</a>
+          <span class="footer-sep">·</span>
+          <span>(415) 650-6094</span>
+          <span class="footer-sep">·</span>
+          <a href="https://linkedin.com/in/oscar-wilmerding" target="_blank" rel="noopener">LinkedIn ↗</a>
+          <span class="footer-sep">·</span>
+          <a href="../../assets/resume/Oscar_Wilmerding_Resume.pdf" target="_blank">Resume ↗</a>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+</body>
+</html>

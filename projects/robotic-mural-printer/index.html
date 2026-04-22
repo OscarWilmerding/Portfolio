@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Robotic Mural Printer — Oscar Wilmerding</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+  <div class="container">
+
+    <nav>
+      <a href="../../" class="nav-name">Oscar Wilmerding</a>
+      <div class="nav-links">
+        <a href="../../">Home</a>
+        <div class="nav-dropdown-wrap">
+          <span class="nav-dropdown-trigger">Projects</span>
+          <div class="nav-dropdown-menu">
+            <a href="../robotic-mural-printer/">Robotic Mural Printer</a>
+            <a href="../small-wall-printer/">Small Wall Printer</a>
+            <a href="../ai-camera/">AI Camera</a>
+            <a href="../kestrel-sensor/">Kestrel Sensor</a>
+            <a href="../robotic-arm/">Robotic Arm</a>
+            <a href="../misting-chamber/">Misting Chamber</a>
+            <a href="../golf-cart-rewiring/">Golf Cart Rewiring</a>
+            <a href="../3d-modeling/">3D Modeling at Northeastern</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <a href="../../" class="back-link">Projects</a>
+
+    <div class="project-header">
+      <h1 class="project-title">Robotic Mural Printer</h1>
+      <p class="project-subtitle">A printer that sprays small dots to recreate an image on large walls.</p>
+      <div class="project-meta">
+        <span>2024</span>
+        <span class="project-meta-dot"></span>
+        <span>Mechanical Design · Embedded Systems · Software</span>
+      </div>
+      <div class="project-skills">
+        <span class="tag">Systems Integration</span>
+        <span class="tag">Motion Control</span>
+        <span class="tag">Embedded Systems</span>
+        <span class="tag">Python Tooling</span>
+        <span class="tag">3D Design</span>
+        <span class="tag">Rapid Prototyping</span>
+      </div>
+    </div>
+
+    <!-- Hero image -->
+    <div class="media-full">
+      <img src="assets/images/primary/mural-title-card.jpg" alt="Robotic Mural Printer">
+    </div>
+
+  </div><!-- close container -->
+
+  <div class="container">
+
+    <!-- Overview -->
+    <div class="body-block">
+      <p class="body-text">The Mural Printer is a large scale wall painting robot designed to recreate digital images on vertical surfaces using coordinated motion and controlled paint deposition. The system turns images into thousands of discrete points and physically recreates them with small dots across a wall. The main image is a 14ft wide mural composed of 120,000 individually placed dots, highlighting the reliability of the system.</p>
+    </div>
+
+    <!-- Polished mural — full width -->
+    <div class="media-full">
+      <img src="assets/images/primary/polished mural 2.jpg" alt="6 ft tall mural from drawing">
+      <div class="caption">6 ft tall mural from drawing</div>
+    </div>
+
+    <!-- Architecture -->
+    <div class="body-block">
+      <div class="body-label">Architecture</div>
+      <p class="body-text">The architecture consists of two subsystems:</p>
+      <ul class="body-list">
+        <li>Base module: dual high torque stepper motors control cable lengths to position the suspended chassis with high repeatability across a large workspace.</li>
+        <li>Chassis module: a self contained carriage that houses the paint delivery mechanisms, onboard power, and control electronics.</li>
+      </ul>
+    </div>
+
+    <!-- Timelapse video -->
+    <div class="media-full">
+      <video
+        src="https://oscarwilmerding.com/timelapse-of-robot-working.mp4"
+        poster="assets/images/primary/timelapse of robot working.jpg"
+        controls
+        playsinline
+        muted
+        preload="none"
+      ></video>
+      <div class="caption">Timelapse of eye being painted</div>
+    </div>
+
+    <!-- First trial -->
+    <div class="media-full">
+      <img src="assets/images/primary/unpolished first attempt.png" alt="First trial at legal graffiti wall in Cambridge">
+      <div class="caption">First trial at legal graffiti wall in Cambridge</div>
+    </div>
+
+    <!-- Technical implementation -->
+    <div class="body-block">
+      <div class="body-label">Technical Implementation</div>
+      <p class="body-text">Custom Python software converts images into optimized coordinate paths and timing instructions. These instructions, similar to Gcode are transmitted to ESP32 microcontrollers, which manage moving the chassis around the wall and telling it to spray at precisely the right positions. The system operates similarly to a large format inkjet printer, where motion and deposition timing must remain tightly coordinated to maintain visual accuracy.</p>
+    </div>
+
+    <!-- Chassis close-up -->
+    <div class="media-full">
+      <video
+        src="https://oscarwilmerding.com/close-up-of-robot-working.mp4"
+        poster="assets/images/primary/close up video of robot working.jpg"
+        controls
+        playsinline
+        muted
+        preload="none"
+      ></video>
+      <div class="caption">The most recent chassis moving slowly on the wall</div>
+    </div>
+
+    <!-- Development process -->
+    <div class="body-block">
+      <div class="body-label">Development Process</div>
+      <p class="body-text">The project required development of custom slicing algorithms, modeling and tuning of cable driven kinematics, and iterative mechanical redesign to improve stiffness, speed, and positioning accuracy. It also involved deliberate material selection to ensure long term reliability when handling spray paint. Most structural and functional components were designed in SolidWorks and fabricated through 3D printing, enabling rapid iteration of mechanical layouts, mounting systems, and actuator housings.</p>
+    </div>
+
+    <!-- RISE poster + recent prototype -->
+    <div class="media-grid">
+      <div class="media-item">
+        <img src="assets/images/primary/poster for rise convention.jpg" alt="Poster presented at RISE">
+        <div class="caption">Poster presented at RISE</div>
+      </div>
+      <div class="media-item">
+        <img src="assets/images/primary/recent-prototype.jpg" alt="Recent prototype">
+        <div class="caption">Recent prototype</div>
+      </div>
+    </div>
+
+    <!-- Outcome -->
+    <div class="body-block">
+      <div class="body-label">Outcome</div>
+      <p class="body-text">This project represents an end to end integration of mechanical design, embedded control, and software tooling to produce a scalable, automated fabrication system.</p>
+    </div>
+
+    <!-- Secondary content -->
+    <div class="body-block">
+      <div class="body-label">Hardware Details</div>
+    </div>
+
+    <div class="media-full">
+      <video
+        src="https://oscarwilmerding.com/solenoid-valve-test.mp4"
+        poster="assets/images/secondary/solenoid valve test poster.jpg"
+        controls
+        playsinline
+        muted
+        preload="none"
+      ></video>
+      <div class="caption">Solenoid valve actuation test</div>
+    </div>
+
+    <div class="media-grid">
+      <div class="media-item">
+        <img src="assets/images/secondary/base module pulleys.jpg" alt="Base module pulleys">
+        <div class="caption">Base module pulleys</div>
+      </div>
+      <div class="media-item">
+        <img src="assets/images/secondary/custom PCB chassis.jpg" alt="Custom PCB on chassis">
+        <div class="caption">Custom PCB — chassis</div>
+      </div>
+    </div>
+
+    <div class="media-full">
+      <img src="assets/images/secondary/existing valves dissected.jpg" alt="Existing valves dissected">
+      <div class="caption">Existing valves dissected for reference</div>
+    </div>
+
+    <footer>
+      <div class="footer-inner">
+        <span class="footer-name">Oscar Wilmerding</span>
+        <div class="footer-links">
+          <a href="mailto:oewilmerding@gmail.com">oewilmerding@gmail.com</a>
+          <span class="footer-sep">·</span>
+          <span>(415) 650-6094</span>
+          <span class="footer-sep">·</span>
+          <a href="https://linkedin.com/in/oscar-wilmerding" target="_blank" rel="noopener">LinkedIn ↗</a>
+          <span class="footer-sep">·</span>
+          <a href="../../assets/resume/Oscar_Wilmerding_Resume.pdf" target="_blank">Resume ↗</a>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+</body>
+</html>

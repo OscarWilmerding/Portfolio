@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kestrel Sensor — Oscar Wilmerding</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+  <div class="container">
+
+    <nav>
+      <a href="../../" class="nav-name">Oscar Wilmerding</a>
+      <div class="nav-links">
+        <a href="../../">Home</a>
+        <div class="nav-dropdown-wrap">
+          <span class="nav-dropdown-trigger">Projects</span>
+          <div class="nav-dropdown-menu">
+            <a href="../robotic-mural-printer/">Robotic Mural Printer</a>
+            <a href="../small-wall-printer/">Small Wall Printer</a>
+            <a href="../ai-camera/">AI Camera</a>
+            <a href="../kestrel-sensor/">Kestrel Sensor</a>
+            <a href="../robotic-arm/">Robotic Arm</a>
+            <a href="../misting-chamber/">Misting Chamber</a>
+            <a href="../golf-cart-rewiring/">Golf Cart Rewiring</a>
+            <a href="../3d-modeling/">3D Modeling at Northeastern</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <a href="../../" class="back-link">Projects</a>
+
+    <div class="project-header">
+      <h1 class="project-title">Kestrel Sensor</h1>
+      <p class="project-subtitle">A sensor used to monitor elderly people in a transparent and unobtrusive way.</p>
+      <div class="project-meta">
+        <span>2023</span>
+        <span class="project-meta-dot"></span>
+        <span>Hardware · Firmware · iOS · Cloud</span>
+      </div>
+      <div class="project-skills">
+        <span class="tag">PCB Design</span>
+        <span class="tag">3D Modeling</span>
+        <span class="tag">iOS / SwiftUI</span>
+        <span class="tag">Python</span>
+        <span class="tag">AWS</span>
+        <span class="tag">Database Integration</span>
+        <span class="tag">Microcontroller Programming</span>
+      </div>
+    </div>
+
+    <div class="media-full">
+      <img src="assets/images/primary/cover.jpg" alt="Kestrel Sensor">
+    </div>
+
+    <div class="body-block">
+      <p class="body-text">My grandmother lives alone, so I developed a system to unobtrusively monitor her well-being. The system consists of a network of motion sensors placed in key doorways throughout the house, tracking daily activity. A custom PCB, designed in KiCad, processes the sensor data and sends it to a backend server hosted on AWS. Family members can access this information through a SwiftUI iOS app, which also sends alerts if no movement is detected for an extended period.</p>
+    </div>
+
+    <div class="media-grid">
+      <div class="media-item">
+        <img src="assets/images/secondary/render v2 port close up.jpg" alt="Close up render of the port for V2">
+        <div class="caption">Close up render — V2 port</div>
+      </div>
+      <div class="media-item">
+        <img src="assets/images/secondary/exploded view v2.jpg" alt="Exploded view of V2">
+        <div class="caption">Exploded view revealing components — V2</div>
+      </div>
+    </div>
+
+    <div class="body-block">
+      <div class="body-label">Development</div>
+      <p class="body-text">Building this system required learning several new skills. I designed and manufactured the PCB, developed an API for handling sensor data, and built an iOS app from scratch. Since many aspects of the project — such as backend development and UI design — were new to me, progress was often slow. However, working on my own timeline allowed me to take the time to learn each component properly and implement them effectively.</p>
+    </div>
+
+    <div class="media-grid">
+      <div class="media-item">
+        <img src="assets/images/secondary/sensor case v2.jpg" alt="Sensor Case V2">
+        <div class="caption">Sensor case — V2</div>
+      </div>
+      <div class="media-item">
+        <img src="assets/images/secondary/top down v2.jpg" alt="Top down view V2">
+        <div class="caption">Top down view — V2</div>
+      </div>
+    </div>
+
+    <div class="body-block">
+      <div class="body-label">PCB &amp; Electronics</div>
+      <p class="body-text">Four custom PCBs were designed in KiCad — a main processing board and three sensor boards for detecting door magnet states. Two versions were iterated, reducing board size significantly from V1 to V2.</p>
+    </div>
+
+    <div class="media-grid">
+      <div class="media-item">
+        <img src="assets/images/secondary/PCB schematic.png" alt="PCB schematic">
+        <div class="caption">One of the 4 PCB schematics manufactured</div>
+      </div>
+      <div class="media-item">
+        <img src="assets/images/secondary/schematic.png" alt="Schematic">
+        <div class="caption">One of the schematics used for the project</div>
+      </div>
+    </div>
+
+    <div class="media-grid">
+      <div class="media-item">
+        <img src="assets/images/secondary/PCB magnet sensor v1.jpg" alt="PCB for detecting magnet V1">
+        <div class="caption">PCB for detecting magnet — V1</div>
+      </div>
+      <div class="media-item">
+        <img src="assets/images/secondary/PCB magnet sensor v2.jpg" alt="PCB for detecting magnet V2">
+        <div class="caption">PCB for detecting magnet — V2, smaller</div>
+      </div>
+    </div>
+
+    <div class="media-full">
+      <img src="assets/images/secondary/main board v2.jpg" alt="Main board V2">
+      <div class="caption">Main board — V2</div>
+    </div>
+
+    <div class="body-block">
+      <div class="body-label">V1</div>
+      <p class="body-text">The first version established the core concept and architecture. Hardware was rougher and the enclosure less refined, but the full sensor-to-app pipeline worked end to end.</p>
+    </div>
+
+    <div class="media-grid">
+      <div class="media-item">
+        <img src="assets/images/secondary/render v1.jpg" alt="Kestrel Sensor V1 render">
+        <div class="caption">Render — V1</div>
+      </div>
+      <div class="media-item">
+        <img src="assets/images/secondary/full render v1.jpg" alt="Full render V1">
+        <div class="caption">Full render — V1</div>
+      </div>
+    </div>
+
+    <div class="media-full">
+      <img src="assets/images/secondary/v1 assembled.jpg" alt="Kestrel Sensor V1 with all components installed">
+      <div class="caption">V1 with all components installed</div>
+    </div>
+
+    <div class="body-block">
+      <div class="body-label">Outcome</div>
+      <p class="body-text">After six months of development, I created a fully functional IoT prototype integrating hardware, software, and cloud services. The project not only helped me build a real-world solution but also reinforced my ability to manage a full-stack system independently, troubleshoot technical challenges, and rapidly learn new technologies.</p>
+    </div>
+
+    <footer>
+      <div class="footer-inner">
+        <span class="footer-name">Oscar Wilmerding</span>
+        <div class="footer-links">
+          <a href="mailto:oewilmerding@gmail.com">oewilmerding@gmail.com</a>
+          <span class="footer-sep">·</span>
+          <span>(415) 650-6094</span>
+          <span class="footer-sep">·</span>
+          <a href="https://linkedin.com/in/oscar-wilmerding" target="_blank" rel="noopener">LinkedIn ↗</a>
+          <span class="footer-sep">·</span>
+          <a href="../../assets/resume/Oscar_Wilmerding_Resume.pdf" target="_blank">Resume ↗</a>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+</body>
+</html>
