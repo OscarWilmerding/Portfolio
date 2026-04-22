@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Oscar Wilmerding</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="container">
+
+    <nav>
+      <a href="/" class="nav-name">Oscar Wilmerding</a>
+      <div class="nav-links">
+        <a href="/">Home</a>
+        <div class="nav-dropdown-wrap">
+          <span class="nav-dropdown-trigger">Projects</span>
+          <div class="nav-dropdown-menu">
+            <a href="projects/robotic-mural-printer/">Robotic Mural Printer</a>
+            <a href="projects/small-wall-printer/">Small Wall Printer</a>
+            <a href="projects/ai-camera/">AI Camera</a>
+            <a href="projects/kestrel-sensor/">Kestrel Sensor</a>
+            <a href="projects/robotic-arm/">Robotic Arm</a>
+            <a href="projects/misting-chamber/">Misting Chamber</a>
+            <a href="projects/golf-cart-rewiring/">Golf Cart Rewiring</a>
+            <a href="projects/3d-modeling/">3D Modeling at Northeastern</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- About -->
+    <section class="section" id="about">
+      <div class="section-label">About</div>
+      <div class="about-photo-wrap">
+        <img src="assets/images/profile-photo.jpg" alt="Oscar Wilmerding" class="profile-photo">
+      </div>
+      <p class="about-text">My name is Oscar, I am a recent Northeastern graduate, and this portfolio serves as a place where I show off my projects, both personal and from work.</p>
+      <p class="about-text">Most of my projects involve mechanical design, 3d printing, PCB design, and systems integration.</p>
+    </section>
+
+    <!-- Projects -->
+    <section class="section" id="projects">
+      <div class="section-label">Projects</div>
+      <ul class="project-list">
+
+        <li class="project-row">
+          <span class="project-year">2024</span>
+          <div class="project-info">
+            <a href="projects/robotic-mural-printer/" class="project-name">Robotic Mural Printer</a>
+            <div class="project-desc">Large-scale wall painting robot — 14ft mural, 120,000 individually placed dots</div>
+            <div class="project-tags-row">
+              <span class="tag">Systems Integration</span>
+              <span class="tag">Motion Control</span>
+              <span class="tag">Embedded Systems</span>
+              <span class="tag">Python</span>
+            </div>
+          </div>
+          <img
+            src="projects/robotic-mural-printer/assets/images/primary/mural-title-card.jpg"
+            alt="Robotic Mural Printer"
+            class="project-thumb"
+          >
+        </li>
+
+        <li class="project-row">
+          <span class="project-year">2024</span>
+          <div class="project-info">
+            <a href="projects/small-wall-printer/" class="project-name">Small Wall Printer</a>
+            <div class="project-desc">Proof-of-concept cable-driven wall printer using a pen actuator</div>
+            <div class="project-tags-row">
+              <span class="tag">Motor Control</span>
+              <span class="tag">Kinematics</span>
+              <span class="tag">Python</span>
+              <span class="tag">3D Design</span>
+            </div>
+          </div>
+          <img src="projects/small-wall-printer/assets/images/primary/cover.png" alt="Small Wall Printer" class="project-thumb">
+        </li>
+
+        <li class="project-row">
+          <span class="project-year">2024</span>
+          <div class="project-info">
+            <a href="projects/ai-camera/" class="project-name">AI Camera</a>
+            <div class="project-desc">Camera that regenerates photos through AI to fit a chosen theme</div>
+            <div class="project-tags-row">
+              <span class="tag">Raspberry Pi</span>
+              <span class="tag">3D Printing</span>
+              <span class="tag">PCB Design</span>
+              <span class="tag">Python</span>
+            </div>
+          </div>
+          <img src="projects/ai-camera/assets/images/primary/cover.png" alt="AI Camera" class="project-thumb">
+        </li>
+
+        <li class="project-row">
+          <span class="project-year">2023</span>
+          <div class="project-info">
+            <a href="projects/kestrel-sensor/" class="project-name">Kestrel Sensor</a>
+            <div class="project-desc">IoT motion sensor network for unobtrusive elderly monitoring</div>
+            <div class="project-tags-row">
+              <span class="tag">PCB Design</span>
+              <span class="tag">iOS App</span>
+              <span class="tag">AWS</span>
+              <span class="tag">Full Stack</span>
+            </div>
+          </div>
+          <img src="projects/kestrel-sensor/assets/images/primary/cover.jpg" alt="Kestrel Sensor" class="project-thumb">
+        </li>
+
+        <li class="project-row">
+          <span class="project-year">2023</span>
+          <div class="project-info">
+            <a href="projects/robotic-arm/" class="project-name">Robotic Arm</a>
+            <div class="project-desc">Custom arm for holding an optical sensor during E Ink display trials</div>
+            <div class="project-tags-row">
+              <span class="tag">Arduino</span>
+              <span class="tag">3D Printing</span>
+              <span class="tag">Machining</span>
+              <span class="tag">Python</span>
+            </div>
+          </div>
+          <img src="projects/robotic-arm/assets/images/primary/cover.jpg" alt="Robotic Arm" class="project-thumb">
+        </li>
+
+        <li class="project-row">
+          <span class="project-year">2023</span>
+          <div class="project-info">
+            <a href="projects/misting-chamber/" class="project-name">Misting Chamber</a>
+            <div class="project-desc">Ultrasonic mist chamber for E Ink film trials, designed and built in days</div>
+            <div class="project-tags-row">
+              <span class="tag">Machining</span>
+              <span class="tag">Part Selection</span>
+              <span class="tag">FEA</span>
+            </div>
+          </div>
+          <img src="projects/misting-chamber/assets/images/primary/cover.jpg" alt="Misting Chamber" class="project-thumb">
+        </li>
+
+        <li class="project-row">
+          <span class="project-year">2022</span>
+          <div class="project-info">
+            <a href="projects/golf-cart-rewiring/" class="project-name">Golf Cart Rewiring</a>
+            <div class="project-desc">Full electrical overhaul of a 90s Yamaha golf cart with upgraded motor and speed controller</div>
+            <div class="project-tags-row">
+              <span class="tag">Circuits</span>
+              <span class="tag">Part Fabrication</span>
+            </div>
+          </div>
+          <img src="projects/golf-cart-rewiring/assets/images/primary/cover.png" alt="Golf Cart Rewiring" class="project-thumb">
+        </li>
+
+        <li class="project-row">
+          <span class="project-year">2021</span>
+          <div class="project-info">
+            <a href="projects/3d-modeling/" class="project-name">3D Modeling at Northeastern</a>
+            <div class="project-desc">SolidWorks modeling projects from coursework</div>
+            <div class="project-tags-row">
+              <span class="tag">SolidWorks</span>
+              <span class="tag">3D Printing</span>
+            </div>
+          </div>
+          <img src="projects/3d-modeling/assets/images/primary/cover.png" alt="3D Modeling" class="project-thumb">
+        </li>
+
+      </ul>
+    </section>
+
+    <footer>
+      <div class="footer-inner">
+        <span class="footer-name">Oscar Wilmerding</span>
+        <div class="footer-links">
+          <a href="mailto:oewilmerding@gmail.com">oewilmerding@gmail.com</a>
+          <span class="footer-sep">·</span>
+          <span>(415) 650-6094</span>
+          <span class="footer-sep">·</span>
+          <a href="https://linkedin.com/in/oscar-wilmerding" target="_blank" rel="noopener">LinkedIn ↗</a>
+          <span class="footer-sep">·</span>
+          <a href="assets/resume/Oscar_Wilmerding_Resume.pdf" target="_blank">Resume ↗</a>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+</body>
+</html>
