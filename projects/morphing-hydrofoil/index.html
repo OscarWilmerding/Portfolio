@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Morphing Hydrofoil, Oscar Wilmerding</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../css/style.css">
+  <link rel="icon" type="image/png" href="../../assets/favicon.png">
+</head>
+<body>
+  <div class="container">
+
+    <nav>
+      <a href="../../index.html" class="nav-name">Oscar's Portfolio</a>
+      <div class="nav-links">
+        <a href="../../index.html">Home</a>
+        <div class="nav-dropdown-wrap">
+          <a href="../index.html" class="nav-dropdown-trigger" style="text-decoration:none">Projects</a>
+          <div class="nav-dropdown-menu">
+            <a href="../robotic-mural-printer/index.html">Robotic Mural Printer</a>
+            <a href="../morphing-hydrofoil/index.html">Morphing Hydrofoil</a>
+            <a href="../small-wall-printer/index.html">Small Wall Printer</a>
+            <a href="../ai-camera/index.html">AI Camera</a>
+            <a href="../kestrel-sensor/index.html">Kestrel Sensor</a>
+            <a href="../robotic-arm/index.html">Robotic Arm</a>
+            <a href="../misting-chamber/index.html">Misting Chamber</a>
+            <a href="../golf-cart-rewiring/index.html">Golf Cart Rewiring</a>
+            <a href="../3d-modeling/index.html">3D Modeling at Northeastern</a>
+          </div>
+        </div>
+        <a href="../../contact/index.html">Contact</a>
+      </div>
+    </nav>
+
+    <a href="../../index.html" class="back-link">Projects</a>
+
+    <div class="project-header">
+      <h1 class="project-title">Morphing Hydrofoil</h1>
+      <p class="project-subtitle">A capstone project: a hydrofoil that continuously morphs its camber and thickness mid-race to optimize lift and drag across changing conditions.</p>
+      <div class="project-meta">
+        <span>2025, Senior Capstone, Northeastern ME</span>
+        <span class="project-meta-dot"></span>
+        <span>Mechanical Design · Linkage Synthesis · 3D Printing</span>
+      </div>
+      <div class="project-skills">
+        <span class="tag">SolidWorks</span>
+        <span class="tag">Linkage Design</span>
+        <span class="tag">3D Printing</span>
+        <span class="tag">Rapid Prototyping</span>
+        <span class="tag">Mechanical Design</span>
+        <span class="tag">Composites</span>
+      </div>
+    </div>
+
+    <!-- Hero -->
+    <div class="media-full">
+      <img src="assets/images/primary/trailing-edge-3-states.png" alt="Trailing edge prototype in three actuation states">
+      <div class="caption">The final trailing-edge prototype articulating between its three actuation states</div>
+    </div>
+
+  </div><!-- close container -->
+
+  <div class="container">
+
+    <!-- Overview -->
+    <div class="body-block">
+      <p class="body-text">After presenting to a panel of judges against the other senior ME capstone teams, our project was selected as the winning capstone of the cohort.</p>
+      <p class="body-text">Fixed hydrofoils force racing boats into a trade-off: thick, cambered foils make great lift at low speed but pile on drag at speed, while thin foils are fast but slow to take off. Today's racing teams swap entire foils between races to chase conditions, or rely on hinged flaps that leak flow and trigger cavitation. The team's goal for this senior capstone was a hydrofoil that morphs continuously, adjusting both thickness and camber mid-race, to hold an optimal profile through the whole speed range.</p>
+      <p class="body-text">The full system uses two driving mechanisms inside a shared internal skeleton: a cam-driven axle that controls thickness along the leading edge, and a linkage-driven axle that bends the trailing edge to control camber. The two mechanisms are wrapped in a hybrid skin, a stiff carbon-fiber leading edge and a uniaxial-carbon-reinforced silicone trailing edge, that keeps a continuous, flap-free profile.</p>
+    </div>
+
+    <!-- Team / context -->
+    <div class="body-block">
+      <div class="body-label">Team & My Role</div>
+      <p class="body-text">This was a five-person capstone advised by Prof. Safa Jamali, with team members Vanessa Khangi, Lily Knott, Adrian Winkelman, Jack Wortman, and myself. My focus was the trailing-edge camber mechanism, the linkage design, the SolidWorks modeling, and the 3D-printed prototype iterations. I also contributed to the internal skeleton and full-wing assembly. The sections below lead with that work, and then walk through the rest of the project that the team built around it.</p>
+    </div>
+
+    <!-- =========================================================
+         TRAILING EDGE, MY PART
+         ========================================================= -->
+
+    <div class="body-block">
+      <div class="body-label">Trailing-Edge Linkage, Concept</div>
+      <p class="body-text">Traditional racing foils control camber with a hinged flap, which produces a sharp kink in the profile and a pressure spike that drives flow separation and cavitation. I wanted the trailing edge to deflect as a continuous curve instead of a single hinge, while still being driven by a single shaft so the whole span could be actuated by one motor.</p>
+      <p class="body-text">I used Gruebler's equation as the starting constraint, the system had to land at exactly one degree of freedom so a single input shaft could fully determine the trailing-edge shape. A Watt-1 six-bar configuration satisfied that, and gave me enough geometric freedom to spread the deflection across three rigid segments hinged in series, rather than rotating one big flap. The result is a continuous "C" curve at full deflection instead of a kinked corner.</p>
+    </div>
+
+    <!-- SolidWorks sketch GIF, kinematic study -->
+    <div class="media-full">
+      <img src="assets/images/primary/trailing-edge-sketch.gif" alt="Animated SolidWorks sketch of the trailing-edge linkage kinematics">
+      <div class="caption">SolidWorks sketch study, driving the six-bar linkage through its full range while measuring discrete input/output angles to characterize the kinematic response</div>
+    </div>
+
+    <div class="body-block">
+      <p class="body-text">I built the linkage first as a 2D parametric sketch in SolidWorks so I could iterate cheaply on bar lengths and pivot locations. I drove the input link through ten discrete angles, recorded the corresponding output-link rotations, and fit trendlines to that data to characterize the non-linear input-to-output mapping. That mapping is what let me size the input range so the trailing edge would land cleanly on the –15° to +5° envelope the CFD study called for, and avoid pushing the linkage anywhere near a singular configuration.</p>
+    </div>
+
+    <!-- 3D model GIF -->
+    <div class="media-full">
+      <img src="assets/images/primary/trailing-edge-3d-model.gif" alt="SolidWorks assembly of the trailing-edge linkage articulating">
+      <div class="caption">Final SolidWorks assembly, symmetric reinforcement, bushings at every pin, and pivots relocated to keep the mechanism away from singularities</div>
+    </div>
+
+    <div class="body-block">
+      <div class="body-label">From First Prototype to Final Design</div>
+      <p class="body-text">The first 3D-printed prototype confirmed the kinematics worked, but it also surfaced every problem you would expect from an early plastic linkage: noticeable backlash, tolerance stacking that compounded across the chain of joints, and binding when the mechanism approached singularities. The second-generation design solved these one at a time:</p>
+      <ul class="body-list">
+        <li>Symmetric reinforcement, every link became a fork rather than a single plate, so loads are carried in double-shear and the mechanism cannot twist out-of-plane under load.</li>
+        <li>Bushings at every pivot, drops friction and eliminates the press-fit slop that was driving most of the backlash.</li>
+        <li>Relocated pivots, small shifts in pin locations pushed the working range away from the singular configurations where the original geometry would jam.</li>
+        <li>Tightened hinge geometry, the inter-segment hinges along the trailing edge were redesigned so the segments meet cleanly across the whole range instead of opening visible gaps at deflection.</li>
+      </ul>
+    </div>
+
+    <!-- CAD screenshot -->
+    <div class="media-full">
+      <img src="assets/images/primary/trailing-edge-cad.png" alt="Close-up render of the final trailing-edge CAD assembly">
+      <div class="caption">Close-up of the final trailing-edge assembly, symmetric forks, three articulating segments, and a single driving shaft entering from the leading-edge side</div>
+    </div>
+
+    <!-- Video, the user's trailing edge video -->
+    <div class="media-full">
+      <video
+        src="https://media.oscarwilmerding.com/NewTEVid.mp4"
+        controls
+        playsinline
+        muted
+        preload="metadata"
+      ></video>
+      <div class="caption">The final trailing-edge prototype sweeping through its full range of motion</div>
+    </div>
+
+    <!-- 3 actuation states already shown as hero - skip duplicate, do print -->
+    <div class="body-block">
+      <div class="body-label">3D-Printed Prototypes</div>
+      <p class="body-text">Most of the linkage parts went through three or four print iterations. Printing the whole mechanism in PLA let me spot where parts collided into each other, tune fits on the bushing seats, and physically feel whether a joint was binding before committing to a design freeze. The final printed assembly hits the full –15° to +5° deflection range smoothly, with consistent motion through neutral and no binding through the singularity-adjacent regions of the original design.</p>
+    </div>
+
+    <!-- =========================================================
+         FULL PROJECT, REST OF THE TEAM'S WORK
+         ========================================================= -->
+
+    <div class="body-block">
+      <div class="body-label">The Rest of the Foil</div>
+      <p class="body-text">The trailing edge is one of two morphing mechanisms in the wing. The team built around it to produce a full, span-spanning foil with thickness control on the leading edge, an internal skeleton tying the two driving shafts together, a hybrid composite skin, and a CFD study that defined what profiles the foil should be able to morph between.</p>
+    </div>
+
+    <!-- Wing skeleton -->
+    <div class="media-full">
+      <img src="assets/images/secondary/wing-skeleton-perspective.png" alt="Perspective view of the full wing internal skeleton">
+      <div class="caption">Internal skeleton, perspective view of the full span</div>
+    </div>
+
+    <div class="media-full">
+      <img src="assets/images/secondary/wing-skeleton-topdown.png" alt="Top-down view of the full wing internal skeleton">
+      <div class="caption">Top-down view showing taper and rib spacing</div>
+    </div>
+
+    <div class="body-block">
+      <p class="body-text">The internal structure is a series of ribs tied together by two spanwise shafts: one driving the cam stack that controls thickness, the other driving the trailing-edge linkages that control camber. Both shafts are actuated by stepper motors that sit outside the foil, with motor sizing back-calculated from a static load analysis of the skin's pre-tension, the team landed on a 30 Nm minimum holding torque to overcome the elastomer skin without backdriving.</p>
+    </div>
+
+    <!-- Width expansion piece, cropped to remove black bars -->
+    <div class="media-full">
+      <div style="overflow:hidden; aspect-ratio: 1200 / 540;">
+        <img src="assets/images/secondary/width-expansion-piece.gif" alt="Width-expansion mechanism animating in SolidWorks" style="width:100%; display:block; margin-top:-5.625%;">
+      </div>
+      <div class="caption">Width-expansion mechanism, animates the leading-edge thickness change driven by the cam stack</div>
+    </div>
+
+    <!-- Skin -->
+    <div class="body-block">
+      <div class="body-label">Compliant Skin</div>
+      <p class="body-text">The outer surface had to be flexible enough to morph but stiff enough to take hydrodynamic load. The team split it into two materials: a stiff carbon-fiber layup over the leading edge that smooths the point load from the cams into a gradual deflection, and a uniaxial-carbon-reinforced two-part RTV silicone over the trailing edge that stretches freely in-plane for camber changes but resists out-of-plane deformation under load. The two are joined by a sheet-metal cleat system embedded in the silicone.</p>
+    </div>
+
+    <div class="media-full">
+      <img src="assets/images/secondary/skin-cross-section.png" alt="Cross-section diagram of the hybrid outer skin">
+      <div class="caption">Skin material stackup, stiff carbon-fiber shell on the leading edge, reinforced silicone on the trailing edge, joined by an A/B cleat system</div>
+    </div>
+
+    <div class="media-full">
+      <img src="assets/images/secondary/skin-deflection-test.png" alt="Out-of-plane point-load deflection test of plain vs reinforced silicone">
+      <div class="caption">Out-of-plane point-load test, the reinforced silicone (right) deflected 86.1% less than plain silicone (left) under a 10 N load, while keeping the same in-plane stretch (tensile moduli within 1% of each other)</div>
+    </div>
+
+    <!-- CFD -->
+    <div class="body-block">
+      <div class="body-label">CFD &amp; Profile Optimization</div>
+      <p class="body-text">The starting profile was an optimized AC75 section from a University of Michigan study. The team ran 2D XFoil sweeps across seven design points spanning upwind, downwind, and takeoff conditions, then verified the winning profile in 3D ANSYS Fluent. Replacing the hinged-flap geometry with a continuous morphed curve essentially eliminated the pressure spike at the flap hinge, and in the worst case, the high-lift takeoff condition, cut drag coefficient by 23.87% and minimum pressure coefficient by 34.83% at matched lift.</p>
+      <p class="body-text">These results fed directly into the trailing-edge design. The set of target profiles the CFD sweep produced is what defined the –15° to +5° deflection envelope I had to hit, which in turn set the input-angle range, bar lengths, and pivot locations of the six-bar linkage.</p>
+    </div>
+
+    <div class="media-full">
+      <img src="assets/images/secondary/cp-vs-x-graphs.png" alt="Pressure coefficient vs chord position, morphing foil vs baseline">
+      <div class="caption">Cp vs. x at the takeoff condition, the baseline flap geometry (right) shows a sharp pressure spike at the hinge; the morphed continuous profile (left) trades it for a much milder bump</div>
+    </div>
+
+    <div class="media-full">
+      <img src="assets/images/secondary/cfd-velocity-vectors.png" alt="3D CFD velocity vector plots, baseline vs optimized">
+      <div class="caption">3D ANSYS Fluent velocity vectors, the baseline foil (left) shows large flow separation across the suction surface; the optimized morphed profile (right) keeps flow attached</div>
+    </div>
+
+    <!-- Outcome -->
+    <div class="body-block">
+      <div class="body-label">Outcome</div>
+      <p class="body-text">The team delivered a working proof-of-concept that demonstrates continuous morphing of both camber and thickness, validated against a CFD-derived performance target. My trailing-edge mechanism transitions cleanly between its full deflection range driven by a single input shaft, with no binding, minimal backlash, and a continuous curve in place of a hinged flap. The natural next step is a Phase II project, scaling the mechanisms to a full sea-trial wing, swapping printed PLA for machined metal, and developing a fully continuous, watertight elastomer skin.</p>
+    </div>
+
+    <div class="body-block" style="display:flex; justify-content:flex-start; padding-top:8px;">
+      <a
+        href="https://media.oscarwilmerding.com/Final%20Executive%20Summary.docx"
+        target="_blank"
+        rel="noopener"
+        style="
+          display:inline-flex;
+          align-items:center;
+          gap:10px;
+          padding:14px 22px;
+          border:1px solid #111;
+          border-radius:6px;
+          background:#111;
+          color:#fff;
+          font-family:'Inter', sans-serif;
+          font-size:15px;
+          font-weight:500;
+          text-decoration:none;
+          letter-spacing:0.01em;
+          transition:background 0.15s ease, color 0.15s ease;
+        "
+        onmouseover="this.style.background='#fff'; this.style.color='#111';"
+        onmouseout="this.style.background='#111'; this.style.color='#fff';"
+      >
+        Read the full executive summary
+        <span style="font-size:13px;">↗</span>
+      </a>
+    </div>
+
+    <footer>
+      <div class="footer-inner">
+        <span class="footer-name">Oscar Wilmerding</span>
+        <div class="footer-links">
+          <a href="mailto:oewilmerding@gmail.com">oewilmerding@gmail.com</a>
+          <span class="footer-sep">·</span>
+          <span>(415) 650-6094</span>
+          <span class="footer-sep">·</span>
+          <a href="https://linkedin.com/in/oscar-wilmerding" target="_blank" rel="noopener">LinkedIn ↗</a>
+          <span class="footer-sep">·</span>
+          <a href="../../assets/resume/Oscar_Wilmerding_Resume.pdf" target="_blank">Resume ↗</a>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+  <script src="../../js/nav.js"></script>
+  <script src="../../js/polish.js"></script>
+</body>
+</html>
